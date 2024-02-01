@@ -20,7 +20,7 @@ def convert_to_ascii():
     final_size = (new_width * font_size, new_height * font_size)
     make_grayscale(image)
     adjust_contrast(image, 5.0)
-    img = img.resize(sample_size)
+    image = image.resize(sample_size)
     ascii_img = Image.new("RGBA", final_size, color="#000000")
     font = ImageFont.truetype("ibm-plex-mono.ttf", font_size)
     drawer = ImageDraw.Draw(ascii_img)
