@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <py-env>
+        - paths:
+          - /image_upload.py
+          - /image_transform.py
+          - Pillow
+    </py-env>
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <title>ASCII ART</title>
+</head>
+<body>
+    <h1>ASCII ART</h1>
+    <label for="file-upload">Upload an image</label>
+    <input type="file" id="file-upload">
+    <div id="output_upload"></div>
+    <button id="file-transform">Transform image</button>
+
+    <py-script>import Pillow as PIL</py-script>
+    <py-script src="./image_upload.py"></py-script>
+    <py-script src="./image_transform.py"></py-script>
+</body>
+</html>
